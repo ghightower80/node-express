@@ -1,0 +1,2 @@
+# Broken App Issues
+There were a couple issues with the code. First it was parsing the JSON in the in the request body. The code did not include middleware to parse the JSON in the request body, it need 'express.json()' middleware to parse the the JSON in the body. The second issue was using the 'async/await' with 'map' The function was nbot being handled correctly. 'Promise/all' is a more efficient way of doing it. The last thing was error handling. The 'catch' block was missing the parameter 'err' to correctly handle errors.
